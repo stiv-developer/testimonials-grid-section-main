@@ -1,0 +1,240 @@
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    /* ### Neutral */
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-style: normal;
+
+    background-color: var(--Light-grayish-blue) ;
+}
+
+.container{
+    padding: 50px 20px;
+}
+
+.card{
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.card.first{
+    background-color: var(--Moderate-violet);
+    position: relative;
+}
+
+.card.first .comillas{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 30px;
+    z-index: 1;
+}
+
+.card.second{
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.card.third{
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card.fourth{
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.card.sixth{
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card .card-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.card .card-header img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 3px solid hsl(263, 67%, 68%);
+}
+
+.card.card.second .card-header img{
+    border: none;
+}
+
+.card.card.third .card-header img{
+    border: none;
+}
+
+.card.card.fourth .card-header img{
+    border: 3px solid hsl(263, 67%, 68%);
+}
+
+.card.card.sixth .card-header img{
+    border: none;
+}
+
+.card .card-header .group-card-header{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+.card .card-header .group-card-header .name{
+    color: white;
+    font-weight: 500;
+}
+
+.card.third .card-header .group-card-header .name{
+    color: var(--Very-dark-grayish-blue);
+}
+
+.card.fourth .card-header .group-card-header .name{
+    color: var(--White);
+}
+
+.card.sixth .card-header .group-card-header .name{
+    color: var(--Very-dark-grayish-blue);
+}
+
+.card .card-header .group-card-header .verified{
+    color: hsl(263, 91%, 78%);
+    font-size: 0.8rem;
+}
+
+.card.second .card-header .group-card-header .verified{
+    color: var(--Light-gray);
+}
+
+.card.third .card-header .group-card-header .verified{
+    color: var(--Light-gray);
+}
+
+.card.fourth .card-header .group-card-header .verified{
+    color: var(--Light-gray);
+}
+
+.card.sixth .card-header .group-card-header .verified{
+    color: var(--Light-gray);
+}
+
+.card .card-body{
+    position: relative;
+    z-index: 2;
+}
+
+.card .card-body .comment-1{
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.card.third .card-body .comment-1{
+    color: var(--Very-dark-grayish-blue);
+}
+
+.card.fourth .card-body .comment-1{
+    color: var(--White);
+}
+
+.card.sixth .card-body .comment-1{
+    color: var(--Very-dark-grayish-blue);
+}
+
+.card .card-body .comment-2{
+    color: hsl(263, 91%, 78%);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.card.second .card-body .comment-2{
+     color: var(--Light-gray);
+}
+
+.card.third .card-body .comment-2{
+    color: var(--Very-dark-grayish-blue);
+}
+
+.card.fourth .card-body .comment-2{
+    color: var(--Light-gray);
+}
+
+.card.sixth .card-body .comment-2{
+    color: var(--Very-dark-grayish-blue);
+}
+
+@media only screen and (min-width: 1440px) {
+    .container{
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 100px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-areas:
+        'card-first card-first card-second card-sixth'
+        'card-third card-fourth card-fourth card-sixth';
+        gap: 20px;
+    }
+
+    .card.first{
+        grid-area: card-first;
+        width: 570px;
+    }
+    
+    .card.second{
+        grid-area: card-second;
+        width: 230px;
+    }
+    
+    .card.third{
+        grid-area: card-third;
+        width: 230px;
+    }
+    
+    .card.fourth{
+        grid-area: card-fourth;
+        width: 570px;
+    }
+    
+    .card.sixth{
+        grid-area: card-sixth;
+        width: 230px;
+    }
+
+    .card{
+        margin-bottom: 0;
+    }
+
+    .card.first .comillas{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 80px;
+        z-index: 1;
+    }
+}
+
